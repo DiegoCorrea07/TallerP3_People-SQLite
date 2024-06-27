@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="People.MainPage" 
+             BackgroundColor="{DynamicResource Light}">
+
+    <Grid Padding="5" RowSpacing="5" ColumnSpacing="5"
+          RowDefinitions="Auto,Auto,Auto,Auto,*">
+
+        <Entry x:Name="newPerson"
+                Placeholder="Enter name"
+                Margin="0,0,0,10" />
+
+        <Button Text="Agregar Persona"
+                Grid.Row="1"
+                Clicked="OnNewButtonClicked" 
+                Margin="0,0,0,10"
+                HeightRequest="40"
+                WidthRequest="210"
+                FontSize="18"/>
+
+        <Label x:Name="statusMessage"
+                TextColor="#FF0000"
+                Grid.Row="2" 
+                Margin="0,0,0,10" />
+
+        <Button Text="Ver Listado Personas"
+                Grid.Row="3"
+                Clicked="OnGetButtonClicked"
+                Margin="0,0,0,10"
+                HeightRequest="40"
+                WidthRequest="210"
+                FontSize="18"/>
+
+        <ScrollView Grid.Row="4" BackgroundColor="#FFF078">
+
+            <CollectionView x:Name="peopleList" Grid.Row="4">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnDefinitions="*,2*">
+                            <Label Text="{Binding Id}" TextColor="#000000" FontAttributes="Bold"/>
+                            <Label Grid.Column="1" Text="{Binding Name}" TextColor="#000000" FontAttributes="Italic"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+        </ScrollView>
+
+    </Grid>
+
+</ContentPage>
