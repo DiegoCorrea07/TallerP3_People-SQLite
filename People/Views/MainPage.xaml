@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="People.MainPage" 
-             BackgroundColor="{DynamicResource Light}">
+             x:Class="People.Views.MainPage" 
+             BackgroundColor="{DynamicResource Gray100}">
 
     <Grid Padding="5" RowSpacing="5" ColumnSpacing="5"
           RowDefinitions="Auto,Auto,Auto,Auto,*">
 
         <Entry x:Name="newPerson"
-                Placeholder="Enter name"
+                Placeholder="Ingrese el nombre"
                 Margin="0,0,0,10" />
 
         <Button Text="Agregar Persona"

@@ -1,4 +1,6 @@
-﻿namespace People;
+﻿using People.Repositories;
+
+namespace People;
 
 public partial class App : Application
 {
